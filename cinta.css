@@ -1,0 +1,43 @@
+/* Contenedor de la cinta */
+.strip-container {
+    overflow-x: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #9b00ff #330066; /* Firefox */
+}
+
+/* Scroll en Chrome y otros */
+.strip-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.strip-container::-webkit-scrollbar-track {
+    background: #330066;
+    border-radius: 5px;
+}
+
+.strip-container::-webkit-scrollbar-thumb {
+    background: #9b00ff;
+    border-radius: 5px;
+}
+
+/* Cinta de imágenes */
+.strip {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.strip img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #9b00ff;
+    flex-shrink: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.strip img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #9b00ff;
+}

@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  background-color: #1a001f; /* Fondo oscuro neutro */
+  color: #fff;
+  padding: 30px 20px 10px;
+}
+
+.contenido-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.informacion {
+  flex: 1 1 250px;
+}
+
+.informacion h2 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.informacion p {
+  color: #ffe6ff;
+  margin: 5px 0;
+}
+
+/* Mapa con borde neón animado, sin fondo del footer */
+.mapa {
+  flex: 1 1 300px;
+  border: 3px solid #ff00ff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #a200ff;
+  animation: neón-brillo 2s infinite alternate;
+}
+
+.mapa iframe {
+  border-radius: 15px;
+}
+
+/* Animación de neón parpadeante */
+@keyframes neón-brillo {
+  0% {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #a200ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #a200ff;
+  }
+  100% {
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #a200ff;
+  }
+}
+
+.derechos {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #fff;
+}

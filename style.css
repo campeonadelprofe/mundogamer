@@ -1,0 +1,39 @@
+/* Fondo y colores del navbar */
+.custom-navbar {
+  background-color: #000;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+/* Logo */
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #ff00ff;
+}
+
+/* Nombre de marca */
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff66ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Enlaces del menú */
+.nav-link {
+  color: #c77dff !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff00ff !important;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Efecto neon en el borde inferior */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus {
+  border-bottom: 2px solid #ff00ff;
+}

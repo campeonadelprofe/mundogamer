@@ -1,0 +1,115 @@
+:root {
+    --rosa-fluorescente: #ff00ff; /* Fucsia / Magenta brillante */
+    --morado-brillo: #8a2be2; /* Azul violeta brillante */
+    --sombra-neon-rosa: 0 0 10px var(--rosa-fluorescente), 0 0 5px rgba(255, 0, 255, 0.5);
+    --sombra-neon-morado: 0 0 8px var(--morado-brillo);
+}
+
+/* 1. Contenedor de la Sección */
+.noticias-seccion {
+    width: 95%; 
+    max-width: 1200px; /* Ancho limitado para que no sea "tan ancho" */
+    margin: 40px auto; 
+    text-align: center;
+}
+
+.noticias-seccion h2 {
+    margin-bottom: 40px;
+    font-size: 3em;
+    color: var(--rosa-fluorescente);
+    text-shadow: var(--sombra-neon-rosa); /* Brillo en el título */
+    text-transform: uppercase;
+}
+
+/* 2. Contenedor de la Cuadrícula (Mosaico) */
+.mosaico-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    padding: 0 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 900px) {
+    .mosaico-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mosaico-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* 3. Estilo de Cada Tarjeta de Noticia (Enlace <a>) */
+.noticia-tarjeta {
+    display: block; /* Para que el enlace ocupe toda la tarjeta */
+    text-decoration: none;
+    background-color: #1a1a1a; /* Fondo oscuro de la tarjeta */
+    border-radius: 10px;
+    border: 1px solid var(--morado-brillo);
+    box-shadow: var(--sombra-neon-morado); /* Brillo morado inicial */
+    overflow: hidden; 
+    transition: all 0.4s ease-in-out;
+}
+
+.noticia-tarjeta:hover {
+    transform: scale(1.03); /* Efecto de zoom y elevación al pasar el ratón */
+    border-color: var(--rosa-fluorescente);
+    box-shadow: var(--sombra-neon-rosa); /* El brillo cambia a rosa fluorescente */
+}
+
+/* 4. Contenedor de la Imagen */
+.imagen-wrapper {
+    width: 100%;
+    padding-top: 56.25%; /* Ratio 16:9 para noticias de videojuegos */
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: brightness(0.9) saturate(1.1); /* Ligeros ajustes a la imagen */
+}
+
+/* 5. Estilo del Texto Inferior */
+.texto-inferior {
+    padding: 15px;
+    text-align: left;
+}
+
+.categoria {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #0d0d0d;
+    background-color: var(--morado-brillo);
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Sombra de texto neon para la categoría */
+    text-shadow: 0 0 2px var(--morado-brillo);
+}
+
+.noticia-tarjeta:hover .categoria {
+    background-color: var(--rosa-fluorescente);
+    text-shadow: 0 0 2px var(--rosa-fluorescente);
+}
+
+.texto-inferior h3 {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.texto-inferior p {
+    font-size: 0.8em;
+    color: #aaa;
+}
